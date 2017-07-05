@@ -103,7 +103,10 @@ open class OAuth2ServerConfiguration : AuthorizationServerConfigurerAdapter() {
      */
     @Bean
     open fun tokenStore(): TokenStore {
-        return RedisTokenStore(redisConnectionFactory)
+        var tokenStore = RedisTokenStore(redisConnectionFactory)
+        //当前版本下，使用redis当做token存储介质，则需要设置前缀
+        tokenStore.setPrefix("token_")
+        return tokenStore
     }
 
 }

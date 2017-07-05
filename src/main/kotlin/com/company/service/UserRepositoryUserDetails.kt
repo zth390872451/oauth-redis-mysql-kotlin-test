@@ -1,3 +1,4 @@
+/*
 package com.company.service
 
 import com.company.domain.Role
@@ -5,14 +6,12 @@ import com.company.entity.Member
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 
+*/
 /**
  * Created by Administrator on 2017/7/5 0005.
- */
-open class UserRepositoryUserDetails(member: Member) : Member(member) ,UserDetails {
+ *//*
 
-    override fun getPassword(): String? {
-        throw UnsupportedOperationException()
-    }
+open  class UserRepositoryUserDetails(member: Member) : Member(member) ,UserDetails {
 
     override fun getAuthorities(): Collection<GrantedAuthority> {
         val role = Role()
@@ -43,4 +42,4 @@ open class UserRepositoryUserDetails(member: Member) : Member(member) ,UserDetai
         private val serialVersionUID = 1L
     }
 
-}
+}*/
